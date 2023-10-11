@@ -61,14 +61,13 @@
 
   <style>
     :root {
-      --link: #BD1E51;
-      --hover: #D06550;
-
+      --txt: #ddd;
+      --bg: #0d0d0d;
     }
     
     body {
-      background: #0d0d0d;
-      color: #ddd;
+      background: var(--bg);
+      color: var(--txt);
       display: flex;
       max-width: 500px;
       margin: 2em;
@@ -100,21 +99,18 @@
     }
 
     details summary {
-      text-decoration: underline 1px;
     }
 
     details > summary:hover {
       cursor: pointer;
-      color: #E5BACE;
+      text-decoration: underline 1px;
     }
 
     details > summary {
-      color: --var(link);
       list-style-type: '+ ';
     }
 
     details[open] > summary {
-      color: --var(hover);
       list-style-type: '− ';
     }
 
@@ -124,15 +120,15 @@
     }
 
     ::selection {
-      background: --var(hover);
+      background: var(--txt);
     }
 
     a:link, a:visited {
-      color: --var(link);
+      color: initial;
     }
 
     a:hover {
-      color: --var(hover);
+      text-decoration: underline;
     }
   </style>
 
