@@ -60,6 +60,12 @@
 </body>
 
   <style>
+    :root {
+      --link: #BD1E51;
+      --hover: #D06550;
+
+    }
+    
     body {
       background: #0d0d0d;
       color: #ddd;
@@ -103,12 +109,12 @@
     }
 
     details > summary {
-      color: #5AC3B0;
+      color: --var(link);
       list-style-type: '+ ';
     }
 
     details[open] > summary {
-      color: #E5BACE;
+      color: --var(hover);
       list-style-type: '− ';
     }
 
@@ -118,15 +124,15 @@
     }
 
     ::selection {
-      background: #E5BACE;
+      background: --var(hover);
     }
 
     a:link, a:visited {
-      color: #5AC3B0;
+      color: --var(link);
     }
 
     a:hover {
-      color: #E5BACE;
+      color: --var(hover);
     }
   </style>
 
